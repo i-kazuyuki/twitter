@@ -48,3 +48,5 @@ gem 'twitter-bootstrap-rails'
 gem 'jquery-turbolinks'
 
 gem 'rails-i18n'
+
+gem 'rails_12factor', group: :production
