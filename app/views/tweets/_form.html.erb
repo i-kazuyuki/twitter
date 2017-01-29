@@ -1,23 +1,23 @@
 <div class="tweet-form">
-<%= form_for(@tweet, url: choose_new_or_edit) do |f| %>
-  <% if @tweet.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= @tweet.errors.count %>件のエラーがあります。</h2>
+  <%= form_for(@tweet, url: choose_new_or_edit) do |f| %>
+    <% if @tweet.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= @tweet.errors.count %>件のエラーがあります。</h2>
 
-      <ul>
-      <% @tweet.errors.full_messages.each do |msg| %>
-        <li class="tweet-error"><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+        <ul>
+          <% @tweet.errors.full_messages.each do |msg| %>
+          <li class="tweet-error"><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
 
-  <%= f.text_field :content, class: 'form-control', placeholder:"いまどうしてる？" %>
-   <span class="count "><!--ここに表示入力可能の残り文字数を表示 --></span>
-  <br><div class="tweet-submit">
-  <%= image_submit_tag("tweet_btn.png") %>
-  
-<% end %>
-</div></div>
+    <%= f.text_field :content, class: 'form-control', placeholder:"いまどうしてる？" %>
+     <span class="count "><!--ここに表示入力可能の残り文字数を表示 --></span>
+      <br><div class="tweet-submit">
+        <%= image_submit_tag("tweet_btn.png") %>
+      </div>
+    <% end %>
+</div>
 
 <%= link_to "×", tweets_path %>

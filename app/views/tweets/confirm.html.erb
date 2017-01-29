@@ -7,7 +7,6 @@
     <%= form_for(@tweet) do |f| %>
       <!-- `f.hidden_field`を使用して、リクエストパラメータに値を設定できるようにしている。 -->
       <%= f.hidden_field :content %>
-
       <!-- @tweet.contentとすることで、表示用の値を画面に出力している。 -->
       <p>ツイート:<%= @tweet.content %></p>
       <%= f.submit "投稿する", class: 'btn btn-primary btn-block' %>
@@ -17,5 +16,5 @@
       <%= f.hidden_field :content %>
       <%= f.submit "戻る", name: 'back', class: 'btn btn-default btn-block' %>
     <% end %>
-</div>
+  </div>
 </div>

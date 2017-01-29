@@ -3,7 +3,6 @@ class TweetsController < ApplicationController
   
   def index
     @tweets = Tweet.all
-    
     # 値が初期化されない戻るボタン。
     # parametersを元にnewアクションを分岐させている。
     if params[:back]
