@@ -1,0 +1,55 @@
+<%= render 'header' %>
+
+
+
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+    
+    <p>下のフォーム、またはメニューのツイートマークから<br>
+    　ツイート投稿画面に移動してツイートを投稿できます。</p>
+
+    <p><%= notice %></p>
+    
+<div class="tweet-form">
+<%= form_for(@tweet, url: choose_new_or_edit) do |f| %>
+  <% if @tweet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @tweet.errors.count %>件のエラーがあります。</h2>
+
+      <ul>
+      <% @tweet.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.text_field :content, class: 'form-control', placeholder:"いまどうしてる？" %>
+  <div class="top-submit">
+    <span class="count "><!--ここに表示入力可能の残り文字数を表示 --></span>
+  <%= image_submit_tag("tweet_btn.png") %>
+<% end %>
+</div>
+</div>
+    
+    
+    
+    
+      
+
+    <% @tweets.each do |tweet| %>
+    <div class="row">
+      <p><img src="<%= asset_path "profile01.jpg" %>", title="profile画像",  width="30px" height="30px"><%= tweet.content %></p>
+      <%= link_to "ツイートを編集する", edit_tweet_path(tweet.id), class: 'btn btn-default btn-sm btn-success' %>
+      <%= link_to 'ツイートを削除する', tweet_path(tweet.id), method: :delete, data: { confirm: '本当に削除していいですか？' }, class: 'btn btn-default btn-sm btn btn-danger' %>
+    </div>
+    <% end %>
+    
+  </div>
+  
+</div>
+
+
+<div id="page-top-btn" class="page-top-btn">
+    <p><a class="move-page-top" id="move-page-top">▲</a></p>
+</div>

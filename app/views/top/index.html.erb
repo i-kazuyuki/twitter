@@ -1,0 +1,34 @@
+<header class="top">
+  <section class="header-icon">
+    <%= link_to image_tag('twitter_icon.png'), root_path %>
+  </section>
+  <section class="main-header">
+　<h1>いまどうしてる？</h1>
+  <ul class="top">
+    <li class="top"><%= link_to "アカウント作成", tweets_path, class: 'btn btn-primary btn-lg' %></li>
+    <li class="top"><%= link_to "ログイン", tweets_path, class: 'btn btn-primary btn-lg' %></li>
+  </ul>
+  </section>
+  <div class="btn-group btn-group-justified">
+    	<a class="btn btn-default">🔍</a>
+      <a class="btn btn-default">トップ</a>
+      <a class="btn btn-default">エンタメ</a>
+      <a class="btn btn-default">音楽</a>
+      <a class="btn btn-default">スポーツ</a>
+      <a class="btn btn-default">ライフスタイル</a>
+      <a class="btn btn-default">アニメ・漫画</a>
+      <a class="btn btn-default">その他</a>
+    </div>
+
+</header>
+
+<section class="about">
+    <h2>Twittr風アプリケーション</h2>
+      <p>
+        このサイトはruby on railsの練習に作成されました。<br>
+        「ログイン」または「アカウント作成」からご利用ください。
+      </p>
+</section>
+<footer>
+  <p>Twitterアプリ練習</p>
+</footer>

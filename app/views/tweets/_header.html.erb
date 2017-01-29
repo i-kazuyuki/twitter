@@ -1,0 +1,46 @@
+<header class="tweet">
+
+
+
+ 
+
+
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to image_tag('twitter_icon.png'), root_path, class: "navbar-brand" %></li>
+      <%= link_to "ホーム", root_path, class: "navbar-brand" %>
+      <%= link_to "通知", tweets_path, class: "navbar-brand" %>
+      <%= link_to "メッセージ", tweets_path, class: "navbar-brand" %>
+      <%= link_to "ツイート一覧", tweets_path, class: "navbar-brand" %>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to image_tag('tweet.png'), new_tweet_path %></li>
+        <li><%= link_to image_tag('profile01.jpg'), tweets_path %> </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">プロフィール編集</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">設定</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">ログアウト</a></li>
+          </ul>
+        </li>
+      </ul>
+      </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+      
+      
+      </header>
